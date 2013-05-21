@@ -38,6 +38,8 @@ I created `connection.js` as a generic way to open the connection, and then exec
 
 The regular http server listener works fine. However, from inside `/test/01-api.js`, unless there is some 'work' that occurs before the connection method is called, `driver.connect` in `connection.js` silently fails.
 
+I've placed three dummy describe('Array',... tests above the connection(function(err, cb) setup for the api test. If the dummy tests are remove. Nothing runs. Nada - no console output or warnings.
+
 What's happening here? Am I doing this wrong? 
 
 
