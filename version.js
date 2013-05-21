@@ -1,4 +1,1 @@
-
-exports.appVersion = function () {
-	return "1.1.1";
-};
+exports.appVersion = "0.0.1";

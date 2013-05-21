@@ -1,6 +1,6 @@
 //Initialize the Couchbase driver.
 var driver = require('couchbase')
-  , appVersion = require('./version.js').appVersion;
+  , appVersion = require('./version.js').appVersion
   , dbConfiguration = {
       "hosts": ["localhost:8091"],
       "bucket": "test"
