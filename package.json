@@ -4,8 +4,11 @@
     "private": true,
     "dependencies":
     {
+        "couchbase": "0.0.12",
         "express": "3.x",
-        "couchbase": "0.0.11",
-        "ejs": ">= 0.0.1"
+        "ejs": ">= 0.0.1",
+        "mocha": "1.9.0",
+        "should": "1.2.2",
+        "supertest": "0.6.0"
     }
 }
