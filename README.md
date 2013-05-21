@@ -32,7 +32,7 @@ Problem with Supertest
 
 Here's the problem.
 
-Couchbases's `driver.connect` expects the open Couchbase connection (`cb`) to be wrapped in a callback which includes whatever mechanism the server is going to respond to (http listener etc. - keeping the connection open all the while the server is running). 
+Couchbases's `driver.connect` expects the open Couchbase connection (`cb`) to be wrapped in a callback which includes whatever mechanism the server is going to respond to (http listener etc.), keeping the connection open all the while the server is running). 
 
 I created `connection.js` as a generic way to open the connection, and then execute the listeners, or in the case if Supertest - the tests.
 
