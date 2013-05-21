@@ -14,7 +14,7 @@ exports.init = function (cb, appVersion) {
 ~ and views.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 function initViews(cb, appVersion) {
-  console.log("\t Installing views for application version "+ appVersion);
+  console.log("Installing views for application version "+ appVersion);
 
   var ddoc = {
     "views": {
@@ -62,13 +62,13 @@ function initViews(cb, appVersion) {
 ~ Helper function to seed the bucket. There is no
 ~ bucket api yet, and so we'll assume that if the
 ~ app.version document was not found, that the 
-~ bucket is empty
+~ bucket is empty.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 function seedDocuments(cb){
-  console.log("\t Seeding bucket with documents.");
+  console.log("Seeding bucket with documents.");
   model = require('./model.js');
   model.documents.forEach(function(item) {
     cb.set(item.id, item, function(err, meta) {});
   });
-  console.log("\t Ready.");
+  console.log("Ready and listening.");
 }
