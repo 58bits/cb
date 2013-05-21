@@ -8,7 +8,7 @@ Installation
 
 Assumes you have node.js and npm installed (for Mac OS X - `brew install node`).
 
-Download and install [Couchbase](http://www.couchbase.com/download) 
+Download and install [Couchbase](http://www.couchbase.com/download). There is an excellent and super easy installer for Mac OS X. 
 
 Clone this repository `git clone https://github.com/58bits/cb.git`
 

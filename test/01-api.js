@@ -5,7 +5,8 @@ var request = require('supertest')
   , app = require('../app.js');
 
 
-
+// These are dummy Array tests, placed here so that there is 
+// some work to do before connection is called below.
 describe('Array', function(){
   describe('#indexOf()', function(){
     it('should return -1 when the value is not present', function(){
