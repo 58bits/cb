@@ -1,4 +1,4 @@
-Node.js and Couchbase
+Node.js, Express and Couchbase
 ====================
 
 An experimental RESTful API built with node.js, express and couchbase.
