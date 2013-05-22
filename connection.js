@@ -8,7 +8,6 @@ var driver = require('couchbase')
     };
 
 module.exports.connect = function() {
-  var result;
   var deferred = Q.defer();
   driver.connect(dbConfiguration, function(err, cb) {
     if (err) {
