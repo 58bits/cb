@@ -91,7 +91,7 @@ If we don't mind including the Couchbase driver in our test setup, then we could
 
 Remember though, that I was down the callback rabbit hole (for quite a while as it happens), reading about [async control flow patterns](http://book.mixu.net/ch7.html) and such, including something called 'promises'. 
 
-I also wanted to abstract away the Coubchase database connection details.
+I also wanted to abstract away the Couchbase database connection details.
 
 And so I created `connection.js` as a generic way to open a connection to Couchbase (or any other database) using a promise with [Kris Kowal's Q framework](https://github.com/kriskowal/q).
 
