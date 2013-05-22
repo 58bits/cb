@@ -26,7 +26,7 @@ From inside the cloned git repository...
 
 The first time either the tests, or the node server is run on a new bucket, the design document for views, and test documents will automatically be loaded into the bucket. Thanks [@tgrall](https://github.com/tgrall/couchbase-node-ideas).
 
-If everything is working you should see a list of two users on `http://localhost:3000/api/users`
+If everything is working you should see `Hello` at `http://localhost:3000/` and a list of two users on `http://localhost:3000/api/users`.
 
 
 Testing with Mocha and Supertest
