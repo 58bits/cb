@@ -36,11 +36,11 @@ Now let's say we'd like to create a set of middleware integration tests for our 
 
 This could be done by starting the express/node.js server, and then using any HTTP lib (curl even) to call the api, and test for the expected results.
 
-I wanted to use [Mocha](https://github.com/visionmedia/mocha) and [Supertest](https://github.com/visionmedia/supertest) and take advantage of Mocha's support for express, and not create a separate server process just to run tests. If our application has all if its require(ments) (including all routes, handlers and a connection to the database), an 'ephemeral' port will be created, and we can call all of the route methods (get, post, put, delete) for the express application in our test fixtures.
+I wanted to use [Mocha](https://github.com/visionmedia/mocha) and [Supertest](https://github.com/visionmedia/supertest) and take advantage of Mocha's support for express, and not create a separate server process just to run tests. If our application has all of its require(ments) (including all routes, handlers and a connection to the database), an 'ephemeral' port will be created, and we can call all of the route methods (get, post, put, delete) for the express application in our test fixtures.
 
-At this point it's worth describing how we connect to Couchbase, and what that's going to mean for our test fixtures.
+At this point it's worth describing how we connect to Couchbase, and what that's going to mean for our test setup.
 
-To create a connection to Couchbase, we call the driver's `driver.connect` method, passing in a callback with the following signature: `function(err, cb){...}`. The use of a callback makes this an asynchronous call (with our callback placed on the queue of the Node.js event loop), and so we won't know exactly when `function(err, cb){...}` is going to be called.
+To create a connection to Couchbase, we call the driver's `driver.connect` method, passing in a callback with the following signature: `function(err, cb){...}`. The use of a callback makes this an asynchronous call (with our callback placed in a queue to be processed by Node.js' event loop), and so we won't know exactly when `function(err, cb){...}` is going to be called.
 
 The excellent sample app, [Easy application development with Couchbase, Angular and Node.js](http://www.javacodegeeks.com/2013/03/easy-application-development-with-couchbase-angular-and-node-js.html) written by Tugdual Grall [@tgrall](https://github.com/tgrall), suggests placing `appServer = app.listen(3000, function() {...}` (and whatever application initialization code we need) inside the callback we send to `driver.connect`. 
 
