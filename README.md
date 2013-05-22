@@ -53,7 +53,6 @@ Fortunately mocha has a little helper method called `done()` that we can include
 If we don't mind including the Couchbase driver in our test setup, then we could probably do something like this (warning - not tested):
 
 	var request = require('supertest')
-		, assert = require("assert")
 		, assert = require("should")
 		, driver = require('couchbase')
 		, application = require('../app.js')
