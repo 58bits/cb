@@ -1,20 +1,26 @@
 //Initialize the Couchbase driver.
 var driver = require('couchbase')
+  , Q = require('q')
   , appVersion = require('./version.js').appVersion
   , dbConfiguration = {
       "hosts": ["localhost:8091"],
       "bucket": "test"
     };
 
-module.exports = function(callback) {
+var waiting = true;
+
+module.exports.connect = function() {
+  var result;
+  var deferred = Q.defer();
   driver.connect(dbConfiguration, function(err, cb) {
     if (err) {
-      throw (err);
+      deferred.reject(new Error(err));
+    } else {
+      deferred.resolve(cb);
     }
     // Initialize the Couchbase design document and seed documents if required.
     require('./init_db.js').init(cb, appVersion);
-
-    //Call the caller's callback, which will keep the connection open as long as required.
-    callback(err, cb);
   });
+
+  return deferred.promise;
 };

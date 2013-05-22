@@ -1,4 +1,4 @@
-module.exports = function(cb) {
+module.exports.init = function(cb) {
   // Initialize express, the api and routes.
   var express = require('express')
   , app = express();
