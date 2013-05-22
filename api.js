@@ -134,7 +134,9 @@ function collection_by_url(req, res) {
   }
 }
 
-// Couchbase helpers.
+/**
+ * Couchbase helpers
+ */
 
 function get(req, res, id, docType) {
   cb.get(id, function(err, doc, meta) {
@@ -188,9 +190,10 @@ function upsert(req, res, docType) {
   }
 }
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~ Return our API object with method keys.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/**
+ * Return our api object.
+ */
+
 return {
   root: root,
   users: users,
