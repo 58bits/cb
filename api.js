@@ -3,8 +3,8 @@ module.exports = function(cb) {
 /**
  * Default response on /
  *
- * @param req
- * @param res
+ * @param {Request} req
+ * @param {Response} res
  * @api public
  */
 
@@ -16,8 +16,8 @@ module.exports = function(cb) {
  * List users
  * TODO: implement paging with skip.
  *
- * @param req
- * @param res
+ * @param {Request} req
+ * @param {Response} res
  * @api public
  */
 
@@ -40,8 +40,8 @@ function users(req, res) {
 /**
  * Find a user by email address
  *
- * @param req
- * @param res
+ * @param {Request} req
+ * @param {Response} res
  * @api public
  */
 
@@ -74,8 +74,8 @@ function user_by_email(req, res) {
 /**
  * Find all collections for a user.
  *
- * @param req
- * @param res
+ * @param {Request} req
+ * @param {Response} res
  * @api public
  */
 
@@ -104,8 +104,8 @@ function collections_by_user(req, res) {
 /**
  * Find a collection by url.
  *
- * @param req
- * @param res
+ * @param {Request} req
+ * @param {Response} res
  * @api public
  */
 
