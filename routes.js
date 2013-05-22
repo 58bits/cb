@@ -1,3 +1,4 @@
+// API routes
 module.exports = function(app, api) {
   app.get('/', api.root);
   app.get('/api/users', api.users);

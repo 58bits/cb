@@ -9,10 +9,14 @@ exports.init = function (cb, appVersion) {
   });
 };
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~ Helper function to initialize the design document 
-~ and views.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/**
+ * Initialize couchbase views.
+ *
+ * @param {Bucket} cb
+ * @param {String} appVersion
+ * @api private
+ */
+
 function initViews(cb, appVersion) {
   console.log("Installing views for application version "+ appVersion);
 
@@ -58,12 +62,13 @@ function initViews(cb, appVersion) {
   });
 }
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~ Helper function to seed the bucket. There is no
-~ bucket api yet, and so we'll assume that if the
-~ app.version document was not found, that the 
-~ bucket is empty.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/**
+ * Seed couchbase documents
+ *
+ * @param {Bucket} cb
+ * @api private
+ */
+ 
 function seedDocuments(cb){
   console.log("Seeding bucket with documents.");
   model = require('./model.js');
