@@ -4,7 +4,7 @@ var driver = require('couchbase')
   , appVersion = require('./version.js').appVersion
   , dbConfiguration = {
       "hosts": ["localhost:8091"],
-      "bucket": "photos"
+      "bucket": "test"
     };
 
 module.exports.connect = function() {
