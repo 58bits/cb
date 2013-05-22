@@ -97,6 +97,6 @@ And so I created `connection.js` as a generic way to open a connection to Couchb
 
 The results are in the repo.
 
-If you've made it this far, and your node.js and JavScript fu is great, try to resist the urge to burst into laughter. Promises are (I believe) typically used to ensure the 'order' of callbacks, for example when a series needs to be executed. 
+If you've made it this far, and your node.js and JavaScript fu is great, try to resist the urge to burst into laughter. Promises are (I believe) typically used to ensure the 'order' of callbacks, for example when a series needs to be executed. 
 
 That said, I was having fun in my rabbit hole, and I've spent a grand total of about 30 odd hours hacking on node.js (as of writing) and so if there's a better/simpler way to do this, then feel free to shout.
