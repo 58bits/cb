@@ -14,7 +14,7 @@ module.exports.init = function(cb) {
       app.use(express.methodOverride());
       app.use(express.cookieParser());
       app.use(express.session({
-        secret: 'photos-x'
+        secret: 'cb-poc-23451d5'
       }));
       app.use(app.router);
       app.use(express.static(__dirname + '/public'));
