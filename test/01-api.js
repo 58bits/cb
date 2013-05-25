@@ -13,7 +13,7 @@ describe("API", function() {
     done();
     }, function (err) {
       console.log("There was an error connecting to the database: " + err);
-      done();
+      process.exit();
     });
   });
 
