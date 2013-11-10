@@ -46,7 +46,7 @@ The excellent sample app, [Easy application development with Couchbase, Angular 
 
 However, `driver.connect` is going to force us to wrap the entire test suite in the `function(err, cb){...}` callback, unless we can determine when the callback has completed.
 
-It was at this point I feel down the callback rabbit hole.
+It was at this point I fell down the callback rabbit hole.
 
 Fortunately mocha has a little helper method called `done()` that we can include in a callback, to tell the test fixture or `before` method that we're done, and ready.
 
